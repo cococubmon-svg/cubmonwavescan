@@ -1,0 +1,185 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: "Geist", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-brand: var(--brand);
+  --color-brand-foreground: var(--brand-foreground);
+  --color-bull: var(--bull);
+  --color-bear: var(--bear);
+  --color-warn: var(--warn);
+  --color-panel: var(--panel);
+  --color-panel-2: var(--panel-2);
+}
+
+:root,
+.theme-quant-lab {
+  --radius: 0.625rem;
+  --background: oklch(0.145 0.005 285);
+  --foreground: oklch(0.97 0.005 285);
+  --card: oklch(0.19 0.006 285);
+  --card-foreground: oklch(0.97 0.005 285);
+  --popover: oklch(0.19 0.006 285);
+  --popover-foreground: oklch(0.97 0.005 285);
+  --primary: oklch(0.74 0.16 162);
+  --primary-foreground: oklch(0.16 0.01 285);
+  --secondary: oklch(0.27 0.008 285);
+  --secondary-foreground: oklch(0.97 0.005 285);
+  --muted: oklch(0.24 0.007 285);
+  --muted-foreground: oklch(0.62 0.01 285);
+  --accent: oklch(0.27 0.008 285);
+  --accent-foreground: oklch(0.97 0.005 285);
+  --destructive: oklch(0.65 0.22 25);
+  --destructive-foreground: oklch(0.98 0 0);
+  --border: oklch(0.27 0.008 285);
+  --input: oklch(0.27 0.008 285);
+  --ring: oklch(0.74 0.16 162);
+  --brand: oklch(0.74 0.16 162);
+  --brand-foreground: oklch(0.16 0.01 285);
+  --bull: oklch(0.74 0.16 162);
+  --bear: oklch(0.66 0.22 25);
+  --warn: oklch(0.82 0.16 80);
+  --panel: oklch(0.19 0.006 285);
+  --panel-2: oklch(0.22 0.007 285);
+}
+
+/* Bloomberg Terminal — pure black + amber */
+.theme-bloomberg {
+  --radius: 0.25rem;
+  --background: oklch(0.06 0 0);
+  --foreground: oklch(0.95 0.05 80);
+  --card: oklch(0.10 0 0);
+  --card-foreground: oklch(0.95 0.05 80);
+  --popover: oklch(0.10 0 0);
+  --popover-foreground: oklch(0.95 0.05 80);
+  --primary: oklch(0.78 0.16 70);
+  --primary-foreground: oklch(0.06 0 0);
+  --secondary: oklch(0.16 0 0);
+  --secondary-foreground: oklch(0.95 0.05 80);
+  --muted: oklch(0.14 0 0);
+  --muted-foreground: oklch(0.55 0.04 80);
+  --accent: oklch(0.16 0 0);
+  --accent-foreground: oklch(0.95 0.05 80);
+  --destructive: oklch(0.65 0.24 25);
+  --destructive-foreground: oklch(0.98 0 0);
+  --border: oklch(0.20 0.02 70);
+  --input: oklch(0.16 0 0);
+  --ring: oklch(0.78 0.16 70);
+  --brand: oklch(0.78 0.16 70);
+  --brand-foreground: oklch(0.06 0 0);
+  --bull: oklch(0.72 0.20 145);
+  --bear: oklch(0.65 0.24 25);
+  --warn: oklch(0.82 0.16 80);
+  --panel: oklch(0.09 0 0);
+  --panel-2: oklch(0.13 0 0);
+}
+
+/* TradingView Dark — slate-blue + cyan */
+.theme-tv-dark {
+  --radius: 0.5rem;
+  --background: oklch(0.18 0.015 250);
+  --foreground: oklch(0.96 0.005 250);
+  --card: oklch(0.22 0.018 250);
+  --card-foreground: oklch(0.96 0.005 250);
+  --popover: oklch(0.22 0.018 250);
+  --popover-foreground: oklch(0.96 0.005 250);
+  --primary: oklch(0.75 0.14 220);
+  --primary-foreground: oklch(0.16 0.02 250);
+  --secondary: oklch(0.28 0.02 250);
+  --secondary-foreground: oklch(0.96 0.005 250);
+  --muted: oklch(0.25 0.018 250);
+  --muted-foreground: oklch(0.65 0.02 250);
+  --accent: oklch(0.28 0.02 250);
+  --accent-foreground: oklch(0.96 0.005 250);
+  --destructive: oklch(0.65 0.22 25);
+  --destructive-foreground: oklch(0.98 0 0);
+  --border: oklch(0.30 0.02 250);
+  --input: oklch(0.28 0.02 250);
+  --ring: oklch(0.75 0.14 220);
+  --brand: oklch(0.75 0.14 220);
+  --brand-foreground: oklch(0.16 0.02 250);
+  --bull: oklch(0.72 0.18 155);
+  --bear: oklch(0.66 0.22 25);
+  --warn: oklch(0.82 0.16 80);
+  --panel: oklch(0.21 0.018 250);
+  --panel-2: oklch(0.25 0.02 250);
+}
+
+/* TradingView Light — crisp white + blue */
+.theme-tv-light {
+  --radius: 0.5rem;
+  --background: oklch(0.99 0.003 250);
+  --foreground: oklch(0.18 0.02 250);
+  --card: oklch(0.97 0.005 250);
+  --card-foreground: oklch(0.18 0.02 250);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.18 0.02 250);
+  --primary: oklch(0.55 0.18 250);
+  --primary-foreground: oklch(0.99 0 0);
+  --secondary: oklch(0.94 0.008 250);
+  --secondary-foreground: oklch(0.18 0.02 250);
+  --muted: oklch(0.95 0.005 250);
+  --muted-foreground: oklch(0.45 0.02 250);
+  --accent: oklch(0.94 0.008 250);
+  --accent-foreground: oklch(0.18 0.02 250);
+  --destructive: oklch(0.6 0.24 25);
+  --destructive-foreground: oklch(0.99 0 0);
+  --border: oklch(0.90 0.008 250);
+  --input: oklch(0.94 0.008 250);
+  --ring: oklch(0.55 0.18 250);
+  --brand: oklch(0.55 0.18 250);
+  --brand-foreground: oklch(0.99 0 0);
+  --bull: oklch(0.55 0.18 155);
+  --bear: oklch(0.55 0.22 25);
+  --warn: oklch(0.65 0.18 70);
+  --panel: oklch(0.97 0.005 250);
+  --panel-2: oklch(0.94 0.008 250);
+}
+
+.dark { color-scheme: dark; }
+
+@layer base {
+  * { border-color: var(--color-border); }
+  html, body { background-color: var(--color-background); color: var(--color-foreground); }
+  body { font-family: var(--font-sans); font-feature-settings: "cv11", "ss01"; }
+}
+
+@layer utilities {
+  .grid-bg {
+    background-image: radial-gradient(circle at 1px 1px, color-mix(in oklab, var(--color-border) 70%, transparent) 1px, transparent 0);
+    background-size: 20px 20px;
+  }
+  .font-mono { font-family: var(--font-mono); }
+  .scrollbar-thin::-webkit-scrollbar { height: 6px; width: 6px; }
+  .scrollbar-thin::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: 3px; }
+}
